@@ -5,6 +5,7 @@ import { LearningLevel, EmotionType } from "../types";
 class GeminiService {
   private genAI: GoogleGenerativeAI;
   private availableModels = [
+    "gemini-flash-latest",
     "gemini-2.5-pro-exp-03-25",  // Latest Gemini 2.5 Pro experimental
     "gemini-2.0-flash-exp",      // Gemini 2.0 Flash experimental
     "gemini-1.5-flash",          // Fallback to 1.5 Flash
@@ -94,6 +95,9 @@ class GeminiService {
         
         // Test current generation models first
         const currentModels = [
+	  "gemini-flash-latest",
+
+
           "gemini-2.5-pro-exp-03-25",
           "gemini-2.0-flash-exp", 
           "gemini-1.5-flash",
@@ -122,4 +126,4 @@ class GeminiService {
   }
 }
 
-export const geminiService = new GeminiService();
+export const geminiService = new GeminiService(); 
